@@ -1,0 +1,96 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #f9eb06;  /* Rojo fuerte para la barra de navegación */
+    color: white;
+}
+
+header .logo img {
+    width: 300px; /* Ajusta el tamaño del logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px; /* Mayor espaciado entre los elementos */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: #000000; /* Cambio de color a amarillo cuando se pasa el mouse */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+/* Sección Hero (fondo difuso y texto destacado) */
+.hero {
+    background: url('ruta-a-tu-imagen.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #f9eb06;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero button a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero button:hover {
+    background-color: darkred;
+}
