@@ -1,77 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es"> <!-- Establecemos el idioma de la página como español -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles.css">
-    <script src="../static/app.js" defer></script>
-    <title>Extintores Bruce</title>
+    <meta charset="UTF-8"> <!-- Definimos el tipo de codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para que la página sea responsiva -->
+    <link rel="stylesheet" href="../static/styles.css"> <!-- Enlace al archivo CSS para el estilo de la página -->
+    <script src="../static/app.js" defer></script> <!-- Enlace al archivo JavaScript para funcionalidades -->
+    <title>Extintores Bruce</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    
 </head>
+
 <body>
+    <!-- Sección del encabezado que contiene los datos de contacto -->
+    <header class="header">
+        <div class="header-left"> <!-- Columna izquierda del encabezado -->
+            <p><i class="bi bi-clock"></i> Horario Lun - Sab: 8:00 am - 8:00 pm</p> <!-- Icono de reloj y el horario -->
+        </div>
+        <div class="header-center"> <!-- Columna central del encabezado -->
+            <p><i class="bi bi-telephone"></i> Contáctenos al: (044) 374124 | 949208893 | 949122435</p> <!-- Icono de teléfono y el número de contacto -->
+        </div>
+        <div class="header-right"> <!-- Columna derecha del encabezado -->
+            <p><i class="bi bi-envelope"></i> Escríbanos: extintoresbrucecars@gmail.com</p> <!-- Icono de correo electrónico y los correos de contacto -->
+        </div>
+    </header>
+
+    <!-- Sección de la barra de navegación -->
     <nav class="navbar">
-        <img src="../Images/logoEmpresa.png" alt="Logo Extintores Bruce" style="width: 300px;">
-        <ul class="nav-links">
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#servicios">SERVICIOS</a></li>
-            <li><a href="#contacto">CONTACTO</a></li>
-            <li><a href="#acerca">ACERCA DE NOSOTROS</a></li>
+        <img src="../Images/logoEmpresa.png" alt="Logo Extintores Bruce" style="width: 300px;"> <!-- Logo de la empresa -->
+        <ul class="nav-links"> <!-- Lista de enlaces de navegación -->
+            <li><a href="#inicio">INICIO</a></li> <!-- Enlace al inicio -->
+            <li><a href="#servicios">SERVICIOS</a></li> <!-- Enlace a los servicios -->
+            <li><a href="#contacto">CONTACTO</a></li> <!-- Enlace al formulario de contacto -->
+            <li><a href="#acerca">ACERCA DE NOSOTROS</a></li> <!-- Enlace a la sección "Acerca de Nosotros" -->
         </ul>
-        <button class="burger">
+        <button class="burger"> <!-- Botón de menú hamburguesa para pantallas pequeñas -->
             <span></span>
             <span></span>
             <span></span>
         </button>
     </nav>
 
+    <!-- Sección principal de bienvenida con un título y botón -->
     <header id="inicio" class="hero-section">
-        <h1>Bienvenido a Nuestra Página Web</h1>
-        <p>Descubre nuestros servicios y más.</p>
-        <a href="#servicios" class="btn-primary">Descubrir Más</a>
+        <h1>Bienvenido a Nuestra Página Web</h1> <!-- Título de bienvenida -->
+        <p>Descubre nuestros servicios y más.</p> <!-- Descripción breve sobre lo que se ofrece -->
+        <a href="#servicios" class="btn-primary">Descubrir Más</a> <!-- Botón para ir a la sección de servicios -->
     </header>
 
     <main>
+        <!-- Sección de los servicios que ofrece la empresa -->
         <section id="servicios" class="cards-container">
-            <h2>Nuestros Servicios</h2>
-            <div class="cards">
-                <div class="card">
+            <h2>Nuestros Servicios</h2> <!-- Título de la sección -->
+            <div class="cards"> <!-- Contenedor de las tarjetas de servicios -->
+                <div class="card"> <!-- Tarjeta de servicio 1 -->
                     <h3>Servicio 1</h3>
-                    <p>Descripción breve de este servicio.</p>
+                    <p>Descripción breve de este servicio.</p> <!-- Descripción del primer servicio -->
                 </div>
-                <div class="card">
+                <div class="card"> <!-- Tarjeta de servicio 2 -->
                     <h3>Servicio 2</h3>
-                    <p>Descripción breve de este servicio.</p>
+                    <p>Descripción breve de este servicio.</p> <!-- Descripción del segundo servicio -->
                 </div>
-                <div class="card">
+                <div class="card"> <!-- Tarjeta de servicio 3 -->
                     <h3>Servicio 3</h3>
-                    <p>Descripción breve de este servicio.</p>
+                    <p>Descripción breve de este servicio.</p> <!-- Descripción del tercer servicio -->
                 </div>
             </div>
-
-
         </section>
+
+        <!-- Sección de contacto con un formulario -->
         <section id="contacto" class="contact-section">
-            <h2>Contacto</h2>
-            <form id="contact-form" method="POST" action="/send_email">
-                <input type="text" name="nombre" placeholder="Nombre" required>
-                <input type="email" name="correo" placeholder="Correo Electrónico" required>
-                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-                <button type="submit">Enviar</button>
+            <h2>Contacto</h2> <!-- Título de la sección de contacto -->
+            <form id="contact-form" method="POST" action="/send_email"> <!-- Formulario de contacto -->
+                <input type="text" name="nombre" placeholder="Nombre" required> <!-- Campo para el nombre -->
+                <input type="email" name="correo" placeholder="Correo Electrónico" required> <!-- Campo para el correo electrónico -->
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea> <!-- Campo para el mensaje -->
+                <button type="submit">Enviar</button> <!-- Botón para enviar el formulario -->
             </form>
         </section>
 
-        
-       <!-- Contenedor para mensajes flash -->
-       <div id="flash-messages" class="flash-messages"></div>
-       
-        <section id="acerca" class="about-section">
-            <h2>Acerca de Nosotros</h2>
-            <p>Somos una empresa dedicada a brindar las mejores soluciones para ti.</p>
-        </section>
+        <!-- Contenedor para mensajes flash (notificaciones) -->
+        <div id="flash-messages" class="flash-messages"></div>
 
+        <!-- Sección de información sobre la empresa -->
+        <section id="acerca" class="about-section">
+            <h2>Acerca de Nosotros</h2> <!-- Título de la sección -->
+            <p>Somos una empresa dedicada a brindar las mejores soluciones para ti.</p> <!-- Descripción de la empresa -->
+        </section>
     </main>
 
+    <!-- Pie de página con derechos reservados -->
     <footer>
-        <p>&copy; 2025. Todos los derechos reservados.</p>
+        <p>&copy; 2025. Todos los derechos reservados.</p> <!-- Texto de derechos reservados -->
     </footer>
 </body>
 </html>
