@@ -1,309 +1,323 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina los rellenos por defecto */
+    box-sizing: border-box; /* Asegura que el ancho y alto incluyan bordes y relleno */
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: white;
+    font-family: 'Arial', sans-serif; /* Establece la fuente principal */
+    line-height: 1.6; /* Ajusta la altura de línea para mejorar la legibilidad */
+    color: #333; /* Color del texto */
+    background: white; /* Fondo blanco para el cuerpo */
 }
-/* Navbar */
+/* Estilo para el encabezado */
+.header {
+    display: flex; /* Usamos Flexbox para organizar los elementos en línea */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    background-color: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Relleno de 10px arriba y abajo, 20px a los lados */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+.header-left, .header-center, .header-right {
+    display: flex; /* Usamos flex para organizar el contenido */
+    align-items: center; /* Alineamos el contenido verticalmente */
+}
+
+.header-left p, .header-center p, .header-right p {
+    margin: 0; /* Eliminamos márgenes */
+    font-weight: bold; /* Texto en negrita */
+}
+
+
+/* Navbar (Barra de navegación) */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: #f9eb06;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    display: flex; /* Usa flexbox para organizar los elementos en fila */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 1rem 2rem; /* Relleno alrededor de los elementos */
+    background: #f9eb06; /* Fondo amarillo */
+    color: white; /* Texto blanco */
+    position: sticky; /* Hace que la barra se quede fija al hacer scroll */
+    top: 0; /* Pegado al top */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
+    font-size: 1.5rem; /* Tamaño de fuente del logo */
+    font-weight: bold; /* Hace que el texto sea en negrita */
+    color: #fff; /* Color blanco */
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+    list-style: none; /* Elimina los puntos de lista */
+    display: flex; /* Disposición en fila de los enlaces */
+    gap: 1rem; /* Espaciado entre los enlaces */
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #e82521;
-    transition: color 0.3s;
+    text-decoration: none; /* Elimina subrayado */
+    color: #e82521; /* Color de los enlaces */
+    transition: color 0.3s; /* Transición suave para el cambio de color */
 }
 
 .nav-links a:hover {
-    color: #000000;
+    color: #000000; /* Color de los enlaces al pasar el mouse */
 }
 
 .burger {
-    display: none;
-    flex-direction: column;
-    gap: 0.3rem;
-    cursor: pointer;
+    display: none; /* Se oculta por defecto */
+    flex-direction: column; /* Organiza las barras en columna */
+    gap: 0.3rem; /* Espaciado entre las barras */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
 
 .burger span {
-    width: 25px;
-    height: 3px;
-    background: #000000;
+    width: 25px; /* Ancho de cada barra */
+    height: 3px; /* Alto de cada barra */
+    background: #000000; /* Color de las barras */
 }
 
-/* página de bienvenida-Hero Section */
+/* Hero Section (Sección de bienvenida) */
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    background: lightgray no-repeat center/cover;
-    color: black;
-    text-align: center;
-    padding: 2rem;
+    display: flex; /* Flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    height: 90vh; /* Altura del 90% de la pantalla */
+    background: lightgray no-repeat center/cover; /* Fondo gris claro */
+    color: black; /* Color de texto negro */
+    text-align: center; /* Centra el texto */
+    padding: 2rem; /* Relleno interno */
 }
 
 .hero-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem; /* Tamaño grande para el título */
+    margin-bottom: 1rem; /* Espaciado debajo del título */
 }
 
 .hero-section p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem; /* Tamaño de fuente para el párrafo */
+    margin-bottom: 2rem; /* Espaciado debajo del párrafo */
 }
 
 .btn-primary {
-    background: black;
-    color: white;
-    padding: 0.8rem 1.8rem;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 50px;
-    transition: background 0.3s, transform 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    padding: 0.8rem 1.8rem; /* Relleno dentro del botón */
+    text-decoration: none; /* Elimina subrayado */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 50px; /* Bordes redondeados */
+    transition: background 0.3s, transform 0.3s; /* Transición suave para el fondo y la transformación */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
 .btn-primary:hover {
-    background: #333;
-    transform: translateY(-3px);
+    background: #333; /* Fondo gris oscuro al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de desplazamiento hacia arriba */
 }
 
-/* sección de tarjetas */
+/* Sección de tarjetas de servicios */
 .cards-container {
-    padding: 3rem;
-    background: #f9f9f9;
+    padding: 3rem; /* Relleno alrededor del contenedor */
+    background: #f9f9f9; /* Fondo gris claro */
 }
 
 .cards-container h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    color: rgb(0, 0, 0);
+    text-align: center; /* Centra el título */
+    margin-bottom: 2rem; /* Espaciado debajo del título */
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    color: rgb(0, 0, 0); /* Color negro para el título */
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    display: grid; /* Usa un grid para organizar las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Repite las columnas adaptándose al tamaño */
+    gap: 2rem; /* Espaciado entre las tarjetas */
 }
 
 .card {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s;
-    color: black;
+    background: #fff; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Evita que los elementos se desborden */
+    text-align: center; /* Centra el contenido dentro de la tarjeta */
+    transition: transform 0.3s; /* Transición suave al cambiar la transformación */
+    color: black; /* Color del texto */
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Escala las tarjetas cuando se pasa el mouse */
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: auto; /* La altura es automática para mantener la relación de aspecto */
 }
 
 .card h3 {
-    margin: 1rem 0;
-    font-size: 1.5rem;
+    margin: 1rem 0; /* Espaciado alrededor del título */
+    font-size: 1.5rem; /* Tamaño de fuente para el título */
 }
 
 .card p {
-    padding: 0 1rem 1rem;
-    font-size: 0.9rem;
+    padding: 0 1rem 1rem; /* Relleno alrededor del texto */
+    font-size: 0.9rem; /* Tamaño de fuente para el párrafo */
 }
 
-/* Seccion de contacto */
+/* Sección de contacto */
 .contact-section {
-    padding: 3rem;
-    background: #000;
-    color: white;
-    text-align: center;
+    padding: 3rem; /* Relleno alrededor de la sección */
+    background: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
 }
 
 .contact-section h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
+    margin-bottom: 1.5rem; /* Espaciado debajo del título */
+    font-size: 2.5rem; /* Tamaño grande para el título */
 }
 
 #contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 500px;
-    margin: 0 auto;
+    display: flex; /* Flexbox para organizar los campos */
+    flex-direction: column; /* Organiza los campos en columna */
+    gap: 1.5rem; /* Espaciado entre los campos */
+    max-width: 500px; /* Ancho máximo para el formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
 }
 
 #contact-form input, #contact-form textarea {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    outline: none;
+    padding: 1rem; /* Relleno dentro de los campos */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    outline: none; /* Elimina el contorno del campo cuando está enfocado */
 }
 
 #contact-form button {
-    background: black;
-    border: none;
-    color: white;
-    padding: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: background 0.3s;
+    background: black; /* Fondo negro para el botón */
+    border: none; /* Sin borde */
+    color: white; /* Texto blanco */
+    padding: 1rem; /* Relleno dentro del botón */
+    font-size: 1.2rem; /* Tamaño de fuente para el botón */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 50px; /* Bordes redondeados */
+    transition: background 0.3s; /* Transición suave para el fondo */
 }
 
 #contact-form button:hover {
-    background: #333;
+    background: #333; /* Fondo gris oscuro al pasar el mouse */
 }
 
-/* Animacion de carga. */
+/* Animación de carga en el botón */
 #contact-form button.loading {
-    background-color: #ccc; 
-    cursor: not-allowed; 
-    position: relative;
+    background-color: #ccc; /* Fondo gris claro cuando está cargando */
+    cursor: not-allowed; /* Cambia el cursor para indicar que no se puede hacer clic */
+    position: relative; /* Necesario para la animación */
 }
 
 #contact-form button.loading::after {
-    content: ''; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 3px solid #fff;
-    border-top: 3px solid transparent;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    animation: spin 1s linear infinite;
+    content: ''; /* Contenido vacío para generar la animación */
+    position: absolute; /* Posición absoluta dentro del botón */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste preciso */
+    border: 3px solid #fff; /* Borde blanco */
+    border-top: 3px solid transparent; /* Bordes para crear el círculo de carga */
+    border-radius: 50%; /* Círculo */
+    width: 20px; /* Tamaño del círculo */
+    height: 20px; /* Tamaño del círculo */
+    animation: spin 1s linear infinite; /* Animación de rotación infinita */
 }
 
 @keyframes spin {
     0% {
-        transform: translate(-50%, -50%) rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg); /* Inicio de la rotación */
     }
     100% {
-        transform: translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg); /* Final de la rotación */
     }
 }
 
 .flash-messages {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-    width: auto;
+    position: fixed; /* Fija la posición de los mensajes en la pantalla */
+    top: 10px; /* Ubicado 10px desde la parte superior */
+    right: 10px; /* Ubicado 10px desde la parte derecha */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    width: auto; /* El ancho es automático */
 }
 
 .alert {
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 14px;
-    animation: fade-in-out 5s forwards;
+    padding: 10px 20px; /* Relleno dentro de los mensajes */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espaciado entre los mensajes */
+    color: white; /* Texto blanco */
+    font-size: 14px; /* Tamaño de fuente para los mensajes */
+    animation: fade-in-out 5s forwards; /* Animación para hacer desaparecer el mensaje */
 }
 
 .alert.success {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Fondo verde para mensajes de éxito */
 }
 
 .alert.danger {
-    background-color: #F44336;
+    background-color: #F44336; /* Fondo rojo para mensajes de error */
 }
 
 /* Animación para desaparecer el mensaje */
 @keyframes fade-in-out {
-    0% { opacity: 1; }
-    80% { opacity: 1; }
-    100% { opacity: 0; }
+    0% { opacity: 1; } /* Empieza visible */
+    80% { opacity: 1; } /* Mantiene la visibilidad por un tiempo */
+    100% { opacity: 0; } /* Se desvanece completamente */
 }
-
-
-
-
-
-
-
 
 /* Sección acerca de nosotros */
 .about-section {
-    padding: 3rem;
-    text-align: center;
-    background: white;
-    color: black;
+    padding: 3rem; /* Relleno alrededor de la sección */
+    text-align: center; /* Centra el texto */
+    background: white; /* Fondo blanco */
+    color: black; /* Texto negro */
 }
 
 .about-section h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
+    margin-bottom: 1.5rem; /* Espaciado debajo del título */
+    font-size: 2.5rem; /* Tamaño grande para el título */
 }
 
 .about-section p {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Tamaño de fuente para el párrafo */
 }
 
-/* pie de página */
+/* Pie de página */
 footer {
-    padding: 1.5rem;
-    background: #000;
-    color: white;
-    text-align: center;
-    font-size: 1rem;
+    padding: 1.5rem; /* Relleno dentro del pie de página */
+    background: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    font-size: 1rem; /* Tamaño de fuente para el pie de página */
 }
-
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
+        display: none; /* Oculta los enlaces en pantallas pequeñas */
+        flex-direction: column; /* Organiza los enlaces en columna */
     }
 
     .nav-links.active {
-        display: flex;
-        background: #000;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        padding: 1rem;
+        display: flex; /* Muestra los enlaces cuando el menú está activo */
+        background: #000; /* Fondo negro */
+        position: absolute; /* Posición absoluta */
+        top: 100%; /* Coloca los enlaces justo debajo de la barra de navegación */
+        right: 0; /* Alinea los enlaces a la derecha */
+        left: 0; /* Alinea los enlaces a la izquierda */
+        padding: 1rem; /* Relleno interno */
     }
 
     .burger {
-        display: flex;
+        display: flex; /* Muestra el botón hamburguesa */
     }
 }
