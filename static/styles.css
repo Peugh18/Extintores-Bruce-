@@ -321,3 +321,29 @@ footer {
         display: flex; /* Muestra el botón hamburguesa */
     }
 }
+
+/* Estilo para el botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent; /* Elimina el fondo verde */
+    color: #2aaf5b; /* Color del icono */
+    padding: 7px; /* Ajusta el tamaño del botón */
+    border-radius: 50%; /* Mantén el borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    font-size: 36px; /* Aumenta el tamaño del icono */
+    text-align: center;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    width: 70px; /* Ajusta el tamaño */
+    height: 70px; /* Asegura que sea redondo */
+}
+
+.whatsapp-float:hover {
+    background-color: transparent; /* Sin cambio de color al pasar el ratón */
+}
+
+.whatsapp-float i {
+    font-size: 36px; /* Aumenta el tamaño del icono */
+}
